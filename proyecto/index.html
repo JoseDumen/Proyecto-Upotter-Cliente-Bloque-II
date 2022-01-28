@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPotter</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="css\estilo.css">
+</head>
+<body>
+    
+    <div class="container" id="containerNavs">
+    <div class="row" id="navBarNoLogueado">
+
+    <nav class="nav navbar-dark col-4"> <!--Navbar NO LOGUEADO izquierda-->
+        <div class="btn-group">
+          <a class="nav-link" href="#" id="navHome">Home</a>
+          <button type="button" id="navProducto" class="btn btn-primary" aria-expanded="false">
+            Productos
+          </button>
+        </div>
+      </nav>   <!--Fin Navbar NO LOGUEADO izquierda-->
+
+<div class="col-6"></div>
+
+      <nav class="nav navbar-dark col-2 me-0"> <!--Navbar NO LOGUEADO derecha-->
+        <div class="btn-group">
+          <button type="button" id="navRegistro" class="btn btn-primary" aria-expanded="false">
+            Regístrate
+          </button>
+          <button type="button" id="navIniciarSesion" class="btn btn-primary" aria-expanded="false">
+            Iniciar sesión
+          </button>   
+        </div>
+      </nav> <!--Fin Navbar NO LOGUEADO derecha-->
+   
+   
+    </div>
+
+    <div class="row" id="navBarLogueado">
+
+      <nav class="nav navbar-dark col-4"> <!--Navbar LOGUEADO izquierda-->
+          <div class="btn-group">
+            <a class="nav-link" href="#" id="navHomeLogueado">Home</a>
+            <button type="button" id="navProductoLogueado" class="btn btn-primary" aria-expanded="false">
+              Productos
+            </button>
+          </div>
+        </nav>   <!--Fin Navbar LOGUEADO izquierda-->
+  
+      <div class="col-6"></div>
+  
+        <nav class="nav navbar-dark col-2 me-0"> <!--Navbar LOGUEADO derecha-->
+          <div class="btn-group">
+            <button type="button" id="navPerfilLogueado" class="btn btn-primary" aria-expanded="false">
+              Perfil
+            </button>
+            <button type="button" id="navCarrito" class="btn btn-primary" aria-expanded="false">
+              Carrito(0)
+            </button>  
+            <button type="button" id="navCerrarSesionLogueado" class="btn btn-primary" aria-expanded="false">
+             Cerrar sesión
+            </button>   
+          </div>
+        </nav> <!--Fin Navbar LOGUEADO derecha-->
+     
+     
+      </div>
+
+      <div class="row" id="navBarAdmin">
+
+        <nav class="nav navbar-dark col-4"> <!--Navbar ADMIN izquierda-->
+            <div class="btn-group">
+              <a class="nav-link" href="#" id="navHomeAdmin">Home</a>
+              <button type="button" id="navEspacioAdmin" class="btn btn-primary" aria-expanded="false">
+                Administración
+              </button>
+              <button type="button" id="navListarUsuarios" class="btn btn-primary" aria-expanded="false">
+                Listar Usuarios
+              </button>
+            </div>
+          </nav>   <!--Fin Navbar ADMIN izquierda-->
+    
+          <div class="col-6"></div>
+    
+          <nav class="nav navbar-dark col-2 me-0"> <!--Navbar ADMIN derecha-->
+            <div class="btn-group">
+              <button type="button" id="navProductoAdmin" class="btn btn-primary" aria-expanded="false">
+                Listado Productos
+              </button>
+              <button type="button" id="navCerrarSesionAdmin" class="btn btn-primary" aria-expanded="false">
+               Cerrar sesión
+              </button>   
+            </div>
+          </nav> <!--Fin Navbar ADMIN derecha-->
+       
+       
+        </div>
+
+
+    </div>
+     
+      
+            <div class="container">                 <!--container-->
+
+              <div class="areaContenido defaultArea my-5" id="areaHome"> <!--área Home-->
+                <div class="display-4 mb-5 cabecera">Tienda Online UPotter</div>
+                <div class="display-5 mb-5 cabecera">IES Hermanos Machado</div>
+                <div class="display-6 mb-5 cabecera">Grupo 5</div>
+                <div class="nombreAlumno">Joaquín Yanes</div>
+                <div class="nombreAlumno">José Francisco Durán</div>
+                <div class="nombreAlumno">Carlos Serrano Blesa</div>
+                <div class="nombreAlumno">Miguel Villalba</div>
+              </div>
+
+              <div class="areaContenido my-5" id="areaPerfil"> <!--****área Perfil de usuario !!!!!!!!!!!!!!!!!!!!!!!!!!CODIGO NUEVO-->
+                <div class="display-4 mb-5 cabecera">Perfil de Usuario</div>
+                
+                <!--EL CONTENIDO SE CARGA SOLO CON EL DOM APROVECHANDO EL FORMULARIO DE REGISTRO-->
+
+              </div>
+
+              <div class="areaContenido my-5" id="areaProductos"> <!--área Productos-->
+                <form class="w-50" name="frmTablasProductos" id="frmTablasProductos">
+                  <div class="form-group row">
+                    <label for="txtPrecio" class="col-4 col-form-label">Precio</label> 
+                    <div class="col-8">
+                      <input id="txtPrecio" name="txtPrecio" type="text" class="form-control" placeholder="Introduzca un precio" value="0">
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-4">Orden</label> 
+                    <div class="col-8">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioPrecio" id="radioPrecio_0" type="radio" class="custom-control-input" value="radioAscendente" checked="checked"> 
+                        <label for="radioPrecio_0" class="custom-control-label">Mayor de...</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioPrecio" id="radioPrecio_1" type="radio" class="custom-control-input" value="radioDescente"> 
+                        <label for="radioPrecio_1" class="custom-control-label">Menor de...</label>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-4">Tipo</label> 
+                    <div class="col-8">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioTipo" id="radioTipo_0" type="radio" class="custom-control-input" value="radioTodos" checked="checked"> 
+                        <label for="radioTipo_0" class="custom-control-label">Todos</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioTipo" id="radioTipo_1" type="radio" class="custom-control-input" value="radioMunecos"> 
+                        <label for="radioTipo_1" class="custom-control-label">Muñecos</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioTipo" id="radioTipo_2" type="radio" class="custom-control-input" value="radioVaritas"> 
+                        <label for="radioTipo_2" class="custom-control-label">Varitas</label>
+                      </div>
+                    </div>
+                  </div> 
+                  <br>
+                  <div class="form-group row">
+                    <div class="offset-4 col-8">
+                      <input name="botonFiltrar" id="botonFiltrar" type="button" class="btn btn-primary w-25" value="Buscar"/>
+                      <input name="botonComprarSeleccionados" id="botonComprarSeleccionados" type="button" class="btn btn-primary w-50" value="Comprar seleccionados"/>
+                      <br>
+                      <br>
+                      <input name="botonLimpiarSeleccionados" id="botonLimpiarSeleccionados" type="button" class="btn btn-primary w-25" value="Limpiar"/>
+                    </div>
+                  </div>
+                  
+                  
+                </form>
+                <br>
+              </div>
+
+              <div class="areaContenido my-5" id="areaCarrito"> 
+                <div class="display-4 mb-5 cabecera">Tramitar compra</div>
+                
+                <!--DEBE MOSTRAR EL CARRITO-->
+
+              </div>
+
+
+              <div class="areaContenido my-5" id="areaIniciarSesion"> <!--área IniciarSesión-->
+            
+                <div class="display-4 mb-5 cabecera">Iniciar Sesión</div>
+
+                <form class="w-50" name="frmInicioSesion" id="frmInicioSesion">
+
+
+                <div class="form-group row my-2">
+                  <label for="txtEmailInicio" class="col-4 col-form-label">Correo electrónico</label> 
+                  <div class="col-8">
+                    <input id="txtEmailInicio" name="txtEmailInicio" type="text" class="form-control">
+                  </div>
+                </div> 
+
+                <div class="form-group row my-2">
+                  <label for="txtPasswordInicio" class="col-4 col-form-label">Contraseña</label> 
+                  <div class="col-8">
+                    <input id="txtPasswordInicio" name="txtPasswordInicio" type="password" class="form-control">
+                  </div>
+                </div> 
+
+                <label><input type="checkbox" id="checkboxMantenerSesion" value="checkboxSesion"> Mantener Sesión Iniciada</label><br>                
+
+                <div class="form-group row my-2">
+                  <div class="offset-4 col-8">
+                    <input name="botonAceptarInicioSesion" type="button" class="btn btn-primary w-30" value="Iniciar Sesión"/>
+                  </div>
+                </div>
+                
+                </form>
+
+              </div> <!--Fin área de Inicio de Sesión-->
+
+
+
+              <div class="areaContenido my-5" id="areaRegistro"> <!--área Registro-->
+
+                <div class="display-4 mb-5 cabecera">Crear nueva cuenta de usuario</div>
+                
+                <form class="w-50" name="frmRegistroUsuario" id="frmRegistroUsuario">
+                 
+
+                  <div class="form-group row my-2">
+                    <label for="txtEmail" class="col-4 col-form-label">Correo electrónico</label> 
+                    <div class="col-8">
+                      <input id="txtEmail" name="txtEmail" type="text" class="form-control">
+                    </div>
+                  </div> 
+
+                  <div class="form-group row my-2" id="areaConfirmaMail">
+                    <label for="txtEmail2" class="col-4 col-form-label">Confirme la dirección de correo</label> 
+                    <div class="col-8">
+                      <input id="txtEmail2" name="txtEmail2" type="text" class="form-control">
+                    </div>
+                  </div> 
+
+                  <div class="form-group row my-2">
+                    <label for="txtPassword" class="col-4 col-form-label">Elije contraseña</label> 
+                    <div class="col-8">
+                      <input id="txtPassword" name="txtPassword" type="password" class="form-control">
+                    </div>
+                  </div> 
+
+                  <div class="form-group row my-2 mb-5">
+                    <label for="txtPassword2" class="col-4 col-form-label">Confirma tu contraseña</label> 
+                    <div class="col-8">
+                      <input id="txtPassword2" name="txtPassword2" type="password" class="form-control">
+                    </div>
+                  </div> 
+
+
+                  <div class="form-group row my-2">
+                    <label for="txtNombreUsuario" class="col-4 col-form-label">Nombre Completo</label> 
+                    <div class="col-8">
+                      <input id="txtNombreUsuario" name="txtNombreUsuario" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group row my-2">
+                    <label for="txtDni" class="col-4 col-form-label">DNI</label> 
+                    <div class="col-8">
+                      <input id="txtDni" name="txtDni" type="text" class="form-control">
+                    </div>
+                  </div>
+                  
+           
+
+                  <div class="form-group row my-2">
+                    <label for="txtDireccion" class="col-4 col-form-label">Dirección</label> 
+                    <div class="col-8">
+                      <input id="txtDireccion" name="txtDireccion" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group row my-2">
+                    <label class="col-4">Tipo de suscripción</label> 
+                    <div class="col-8">
+                     
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioSuscripcion" id="radioPremium" type="radio" class="custom-control-input" value="premium" checked> 
+                        <label for="radioPremium" class="custom-control-label">Premium</label>
+                      </div>
+                     
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="radioSuscripcion" id="radioGratis" type="radio" class="custom-control-input" value="gratis"> 
+                        <label for="radioGratis" class="custom-control-label">Gratuita</label>
+                      </div>
+                    </div>
+                  </div>
+                 
+                  <div class="form-group row my-2">
+                    <div class="offset-4 col-8">
+                      <input name="botonAceptarRegistroUsuario" type="button" class="btn btn-primary w-25" value="Crear"/>
+                    </div>
+                  </div>
+              
+                </form>
+
+              </div> <!--Fin área de registro-->
+              
+              <div class = "areaContenido my-5" id="areaListadoProductosAdmin" style = "display: block">
+                
+                    <div class="display-4 rb-5 cabecera">Listado Productos</div>
+              
+              </div>
+
+              <div class="areaContenido my-5" id="areaListadoUsuarios">
+
+                <div class="display-4 mb-5 cabecera">Lista de Usuarios</div>
+
+              </div>
+      
+         
+              <div id="mensaje">Hola</div>
+            </div> <!--container-->
+      
+      
+      
+    <!--JS Bootstrap-->
+    <script src="js\bootstrap.bundle.min.js"></script>
+    <!--JS Auxiliar-->
+    <script src="js\cookiesandxml.js"></script>
+    <!--JS del grupo de trabajo-->
+    <script src="js\objetos.js"></script>
+    <script src="js\codigo.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<productos>
+
+    <muneco>
+        <producto id="munecoHedwig">
+            <nombre>Muñeco de Hedwig</nombre>
+            <precio>11.99</precio>
+            <stock>12</stock>
+            <personaje>Hedwig</personaje>
+            <tipo>Peluche</tipo>
+        </producto>
+        
+        <producto id="munecoCrookshanks">
+            <nombre>Muñeco de Crookshanks</nombre>
+            <precio>9.99</precio>
+            <stock>16</stock>
+            <personaje>Crookshanks</personaje>
+            <tipo>Peluche</tipo>
+        </producto>
+
+        <producto id="munecoDobby">
+            <nombre>Muñeco de Dobby</nombre>
+            <precio>11.99</precio>
+            <stock>8</stock>
+            <personaje>Dobby</personaje>
+            <tipo>Peluche</tipo>
+        </producto>
+
+        <producto id="munecoFawkes">
+            <nombre>Muñeco de Fawkes</nombre>
+            <precio>9.99</precio>
+            <stock>9</stock>
+            <personaje>Fawks</personaje>
+            <tipo>Peluche</tipo>
+        </producto>
+
+        <producto id="munecoBasilisco">
+            <nombre>Muñeco de Basilisco</nombre>
+            <precio>9.99</precio>
+            <stock>11</stock>
+            <personaje>Basilisco</personaje>
+            <tipo>Peluche</tipo>
+        </producto>
+
+        <producto id="munecoAragog">
+            <nombre>Muñeco de Aragog</nombre>
+            <precio>9.99</precio>
+            <stock>15</stock>
+            <personaje>Aragog</personaje>
+            <tipo>Peluche</tipo>
+        </producto>
+
+        <producto id="munecoPotter">
+            <nombre>Muñeco de Harry Potter</nombre>
+            <precio>15.99</precio>
+            <stock>7</stock>
+            <personaje>Harry Potter</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+
+        <producto id="munecoWeasley">
+            <nombre>Muñeco de Ron Weasley</nombre>
+            <precio>14.99</precio>
+            <stock>8</stock>
+            <personaje>Ron Weasley</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+
+        <producto id="munecoGranger">
+            <nombre>Muñeco de Hermione Granger</nombre>
+            <precio>14.99</precio>
+            <stock>8</stock>
+            <personaje>Hermione Granger</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+
+        <producto id="munecoRyddle">
+            <nombre>Muñeco de Tom Ryddle</nombre>
+            <precio>14.99</precio>
+            <stock>10</stock>
+            <personaje>Tom Ryddle</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+
+        <producto id="munecoDumbledore">
+            <nombre>Muñeco de Albus Dumbledore</nombre>
+            <precio>15.99</precio>
+            <stock>9</stock>
+            <personaje>Albus Dumbledore</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+
+        <producto id="munecoMalfoy">
+            <nombre>Muñeco de Draco Malfoy</nombre>
+            <precio>14.99</precio>
+            <stock>11</stock>
+            <personaje>Draco Malfoy</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+
+        <producto id="munecoHagrid">
+            <nombre>Muñeco de Rubeus Hagrid</nombre>
+            <precio>14.99</precio>
+            <stock>10</stock>
+            <personaje>Rubeus Hagrid</personaje>
+            <tipo>Muñeco</tipo>
+        </producto>
+    </muneco>
+
+    <varita>
+        <producto id="varitaDumbledore">
+            <nombre>Varita de Albus Dumbledore</nombre>
+            <precio>24.99</precio>
+            <stock>1</stock>
+            <propietario>Albus Dumbledore</propietario>
+            <material>Sauco</material>
+        </producto>
+
+        <producto id="varitaLestrange">
+            <nombre>Varita de Bellatrix Lestrange</nombre>
+            <precio>19.99</precio>
+            <stock>5</stock>
+            <propietario>Bellatrix Lestrange</propietario>
+            <material>Nogal</material>
+        </producto>
+
+        <producto id="varitaBlack">
+            <nombre>Varita de Sirius Black</nombre>
+            <precio>19.99</precio>
+            <stock>3</stock>
+            <propietario>Sirius Black</propietario>
+            <material>Roble</material>
+        </producto>
+
+        <producto id="varitaMalfoy">
+            <nombre>Varita de Draco Malfoy</nombre>
+            <precio>19.99</precio>
+            <stock>4</stock>
+            <propietario>Draco Malfoy</propietario>
+            <material>Espino</material>
+        </producto>
+
+        <producto id="varitaPotter">
+            <nombre>Varita de Harry Potter</nombre>
+            <precio>24.99</precio>
+            <stock>2</stock>
+            <propietario>Harry Potter</propietario>
+            <material>Acebo</material>
+        </producto>
+
+        <producto id="varitaGranger">
+            <nombre>Varita de Hermione Granger</nombre>
+            <precio>19.99</precio>
+            <stock>3</stock>
+            <propietario>Hermione Granger</propietario>
+            <material>Vid</material>
+        </producto>
+
+        <producto id="varitaMcGonagall">
+            <nombre>Varita de Minerva McGonagall</nombre>
+            <precio>19.99</precio>
+            <stock>5</stock>
+            <propietario>Minerva McGonagal</propietario>
+            <material>Abeto</material>
+        </producto>
+
+        <producto id="varitaWeasley">
+            <nombre>Varita de Ron Weasley</nombre>
+            <precio>19.99</precio>
+            <stock>2</stock>
+            <propietario>Ron Weasley</propietario>
+            <material>Fresno</material>
+        </producto>
+
+        <producto id="varitaRyddle">
+            <nombre>Varita de Tom Ryddle</nombre>
+            <precio>24.99</precio>
+            <stock>2</stock>
+            <propietario>Tom Ryddle</propietario>
+            <material>Tejo</material>
+        </producto>
+    </varita>
+
+</productos>
