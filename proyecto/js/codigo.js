@@ -20,7 +20,7 @@ document.querySelector("#navRegistro").addEventListener("click",function() {most
 frmRegistroUsuario.botonAceptarRegistroUsuario.addEventListener("click",registroUsuario,false);
 frmInicioSesion.botonAceptarInicioSesion.addEventListener("click",inicarSesion,false);
 frmInicioSesion.botonAceptarInicioSesion.addEventListener("click", recuperarCookiesCarrito(),false);
-document.querySelector("#navPerfilLogueado").addEventListener("click",contruyePerfil,false);   // **!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CODIGO NUEVO!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+document.querySelector("#navPerfilLogueado").addEventListener("click",contruyePerfil,false);  
 document.querySelector("#navCerrarSesionLogueado").addEventListener("click",function(){desloguear(),false})
 document.querySelector("#navCerrarSesionAdmin").addEventListener("click",function(){desloguear(),false})
 document.querySelector("#navListarUsuarios").addEventListener("click",function() {mostrarArea("areaListadoUsuarios");},false);
@@ -66,8 +66,7 @@ function ocultarNavBar() {
    }
 }
 
-function mostrarNavBar() {     // CÓDIGO NUEVO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+function mostrarNavBar() {     
     ocultarNavBar();
 
     if(!oUsuarioLogueado) 
@@ -98,7 +97,7 @@ function mostrarNavBar() {     // CÓDIGO NUEVO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 }
 
-function validarDatos() {   //**!!!!!!!!!!!!!!!!!!!!!CÓDIGO NUEVO HE HECHO VALIDAR DATOS, EL AREA DE PERFIL, EL EVENT LISTENER DEL BOTON DE PERFIL (deja de funcionar \r\n)
+function validarDatos() {  
     let bTodoOk = true;
     let bPrimerErrorEncontrado = false;
     let sMensajeError = "";
@@ -258,7 +257,7 @@ mensaje(sMensajeError);
 return bTodoOk;
 }
 
-function registroUsuario() { //****************************************************!CÓDIGO NUEVO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*************************
+function registroUsuario() { 
 
 if(validarDatos()){
 
@@ -357,7 +356,7 @@ function inicarSesion()
 
         if(bCorrecto)
         {
-            sMensajeError = "\r\n Inicio de Sesión Correctamente"; // PEQUEÑAS MODIFICACIONES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            sMensajeError = "\r\n Inicio de Sesión Correctamente"; 
             oUsuarioLogueado = oUsuarioTemporal;   
             mostrarNavBar();
             mostrarArea("areaHome");
@@ -376,7 +375,7 @@ function inicarSesion()
 function desloguear() {
     oUsuarioLogueado = null;
     deleteCookie("usuarioLogueado");
-    location.reload();     // PEQUEÑAS MODIFICACIONES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    location.reload();
 }
 
 
@@ -386,7 +385,7 @@ oMensaje.textContent = cadena;
 oMensaje.style.display = "block";
 }
 
-function contruyePerfil() {    // Construye el área de perfil usuario !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CODIGO NUEVO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function contruyePerfil() {   
     mostrarArea("areaRegistro");
     let oCabecera = document.querySelector("#areaRegistro").querySelector(".cabecera");
     oCabecera.textContent = "Perfil de "+oUsuarioLogueado.Nombre; 
@@ -410,12 +409,11 @@ function contruyePerfil() {    // Construye el área de perfil usuario !!!!!!!!!
     
     }
     
-    function cargarDatosPerfil() {   // Construye el área de perfil usuario !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CODIGO NUEVO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    function cargarDatosPerfil() {  
         
         frmRegistroUsuario.txtEmail.value = oUsuarioLogueado.Correo;
         frmRegistroUsuario.txtEmail2.value = oUsuarioLogueado.Correo;
         frmRegistroUsuario.txtPassword.value = oUsuarioLogueado.password;
-        //frmRegistroUsuario.txtPassword2.value = oUsuarioLogueado.password;
         frmRegistroUsuario.txtNombreUsuario.value = oUsuarioLogueado.Nombre;
         frmRegistroUsuario.txtDni.value = oUsuarioLogueado.Dni;
         frmRegistroUsuario.txtDireccion.value = oUsuarioLogueado.Direccion;
@@ -428,11 +426,11 @@ function contruyePerfil() {    // Construye el área de perfil usuario !!!!!!!!!
         
     }
     
-    function habilitarBtnModificar() { // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CODIGO NUEVO
+    function habilitarBtnModificar() { 
         document.querySelector("[name = botonModificarUsuario]").removeAttribute("disabled");
     }
     
-    function modificarDatos() { // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CODIGO NUEVO
+    function modificarDatos() {
         if(validarDatos()) {
             let sPassConfirmación = prompt("Para actualizar introduzca su contraseña actual");
          if (sPassConfirmación == sPassConfirmación) {
@@ -459,7 +457,7 @@ function contruyePerfil() {    // Construye el área de perfil usuario !!!!!!!!!
         }
      }
 
-//Para recuperar el carrito del usuario --------------------- Se puede mejorar para que sea para un usuario en específico
+//Para recuperar el carrito del usuario
 function recuperarCookiesCarrito()
 {
     let sCookieCarrito = getCookie("carrito");
@@ -489,17 +487,14 @@ function guardaUsuarioLogueado(oUsuarioTemporal)
     setCookie("usuarioLogueado",sUsuarioTemporal,30);
 }
 
-//Si hay cookie de un usuario para mantener la sesion iniciada ---------------------------- ¿HAY QUE COMPLETARLO CON QUE INICIE SESION SOLO?
+//Si hay cookie de un usuario para mantener la sesion iniciada
 function iniciarSesionUsuarioLogueado()
 {
     let usuarioRegistradoEmail;
     let cookieUsuarioLogueado = getCookie("usuarioLogueado");
     if (cookieUsuarioLogueado.length > 0)
     {
-        //CAMBIAR PARA QUE INICIE SESION AUTOMATICAMENTE
-
-
-        //Creo el objeto del usuarioLogueado con indices 'email' y 'password'
+        
         let oUsuarioInicioSesion = JSON.parse(cookieUsuarioLogueado);
 
         //Busco si hay un usuario con ese mismo email y lo saco a una variable
@@ -625,7 +620,6 @@ function filtrarTabla(){
     let oTabla = document.querySelector("#areaProductos table");
     let iNumeroRegistros = oTabla.children[1].children.length;
 
-    //document.querySelector("#areaProductos table").children[1].children[4].children[1]
 
     if(iValor >0){
         if(bTodos){
@@ -1086,7 +1080,7 @@ let oTablaDesplegada = document.querySelector("#areaProductosAdmin table");
     oTabla.classList.add("table-striped");
     oTabla.classList.add("table-hover");
 
-    //crear encabezado/7
+    //crear encabezado/
     let oTHead = oTabla.createTHead();
 
     //crear fila//
@@ -1159,7 +1153,6 @@ let oTablaDesplegada = document.querySelector("#areaProductosAdmin table");
     // Agregar el cuerpo a la tablaa
     oTabla.appendChild(oTBody);
 
-   /// document.getElementById("areaProductosAdmin").appendChild(oTabla);
 return oTabla;
 
 }
